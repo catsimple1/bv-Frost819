@@ -74,7 +74,7 @@ android {
                 "proguard-rules.pro"
             )
             // signingConfig = signingConfigs.getByName("release")
-            if (signingProp.exists()) signingConfig = signingConfigs.getByName("release")
+            //if (signingProp.exists()) signingConfig = signingConfigs.getByName("release")
         }
         debug {
             isMinifyEnabled = false
@@ -84,7 +84,7 @@ android {
             )
             applicationIdSuffix = ".debug"
             // signingConfig = signingConfigs.getByName("debug")
-            if (signingProp.exists()) signingConfig = signingConfigs.getByName("debug")
+            //if (signingProp.exists()) signingConfig = signingConfigs.getByName("debug")
         }
         create("r8Test") {
             isMinifyEnabled = true
@@ -93,7 +93,7 @@ android {
                 "proguard-rules.pro"
             )
             applicationIdSuffix = ".r8test"
-            if (signingProp.exists()) signingConfig = signingConfigs.getByName("release")
+            //if (signingProp.exists()) signingConfig = signingConfigs.getByName("release")
         }
         create("alpha") {
             isMinifyEnabled = true
@@ -101,7 +101,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            if (signingProp.exists()) signingConfig = signingConfigs.getByName("release")
+            //if (signingProp.exists()) signingConfig = signingConfigs.getByName("release")
         }
     }
     // https://issuetracker.google.com/issues/260059413
